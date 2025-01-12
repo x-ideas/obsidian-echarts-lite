@@ -1,10 +1,15 @@
+import replace from "@rollup/plugin-replace";
 import { defineConfig } from "vite";
 
 import builtins from "builtin-modules";
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [],
+	plugins: [
+		replace({
+			"process.env.NODE_ENV": JSON.stringify("development"),
+		}),
+	],
 	build: {
 		lib: {
 			entry: "src/main.ts",

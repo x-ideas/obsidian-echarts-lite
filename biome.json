@@ -8,7 +8,7 @@
 	"files": {
 		"ignoreUnknown": false,
 		"ignore": ["dist"],
-		"include": ["src/**"]
+		"include": ["src/**", "vite.config.mts", "vitest.config.mts"]
 	},
 	"formatter": {
 		"enabled": true,
