@@ -13,7 +13,7 @@ Feature:
 
 ### manual install
 
-- download assets from [release](https://github.com/xjiaxiang86/obsidian-echarts-lite/releases)
+- download assets from [release](https://github.com/x-ideas/obsidian-echarts-lite/releases)
 - create a folder named `echarts-lite` in your obsidian vault plugin folder({your obsidian vault path}/.obsidian/plugins/)
 - move the downloaded assets to the new created folder
 - reload Obsidian
