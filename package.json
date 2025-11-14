@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-echarts-lite",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "echarts plugin for obsidian, compatible with mobile.",
 	"main": "main.js",
 	"scripts": {
