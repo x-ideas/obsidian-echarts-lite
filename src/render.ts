@@ -7,7 +7,7 @@ import {
 
 import { Notice } from "obsidian";
 
-interface Options extends EChartsOption {
+export interface Options extends EChartsOption {
 	initOpt?: EChartsInitOpts;
 }
 
@@ -21,6 +21,8 @@ export function render(opt: Options, el: HTMLElement) {
 
 	try {
 		chart.setOption(opt);
+
+		return chart;
 	} catch (e) {
 		// obsidian show tip
 		new Notice("Render [echart] failed");
@@ -39,7 +41,7 @@ function initEchart(el: HTMLElement, opt: EChartsInitOpts) {
 			Array.from(document.body.classList).includes("theme-dark")
 				? "dark"
 				: "light",
-			{ ...opt, width, height },
+			{ ...opt, width, height }
 		);
 	}
 

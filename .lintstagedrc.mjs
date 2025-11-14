@@ -1,3 +1,4 @@
 export default {
-	"*.{ts,js,cjs,mjs,tsx}": ["biome check"],
+	'*.md': ['prettier --write'],
+	'*.{ts,js,cjs,mjs,tsx}': ['oxlint && eslint'],
 };
