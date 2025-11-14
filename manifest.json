@@ -1,7 +1,7 @@
 {
 	"id": "echarts-lite",
 	"name": "Echarts Lite",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Echarts Lite is a plugin for obsidian, compatible with mobile.",
 	"author": "xjiaxiang86",
