@@ -3,9 +3,9 @@ import {
 	type EChartsOption,
 	getInstanceByDom,
 	init,
-} from "echarts";
+} from 'echarts';
 
-import { Notice } from "obsidian";
+import { Notice } from 'obsidian';
 
 export interface Options extends EChartsOption {
 	initOpt?: EChartsInitOpts;
@@ -25,23 +25,23 @@ export function render(opt: Options, el: HTMLElement) {
 		return chart;
 	} catch (e) {
 		// obsidian show tip
-		new Notice("Render [echart] failed");
+		new Notice('Render [echart] failed');
 		console.error(e);
 	}
 }
 
 function initEchart(el: HTMLElement, opt: EChartsInitOpts) {
-	const container = el.createDiv("echart-lite-container");
+	const container = el.createDiv('echart-lite-container');
 	let chart = getInstanceByDom(container);
-	const { width = 800, height = 600 } = opt;
+	const { width = 600, height = 500 } = opt;
 
 	if (!chart) {
 		chart = init(
 			container,
-			Array.from(document.body.classList).includes("theme-dark")
-				? "dark"
-				: "light",
-			{ ...opt, width, height }
+			Array.from(document.body.classList).includes('theme-dark')
+				? 'dark'
+				: 'light',
+			{ ...opt, width, height },
 		);
 	}
 
