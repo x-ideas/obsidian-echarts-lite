@@ -19,6 +19,16 @@ Feature:
 - reload Obsidian
 - enable the plugin
 
+### install from BRAT(Currently Recommended)
+
+- Install [BRAT](https://github.com/TfTHacker/obsidian42-brat) if you haven't installed it yet.
+- Enable BRAT in **Settings → Community plugins**
+- Open Command Palette(Ctrl+P) and type `BRAT: Plugins: Add a beta plugin for test` to open the Community Plugin Manager.
+- input the plugin repository url: https://github.com/x-ideas/obsidian-echarts-lite
+- select the latest version
+- click `Add plugin` button to install the plugin.
+- enable `echarts-lite` plugin in **Settings → Community plugins** if it's not enabled automatically.
+
 ## How to Use
 
 ````ts
