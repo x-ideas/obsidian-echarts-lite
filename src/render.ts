@@ -1,9 +1,6 @@
-import {
-	type EChartsInitOpts,
-	type EChartsOption,
-	getInstanceByDom,
-	init,
-} from 'echarts';
+import { type EChartsInitOpts, type EChartsOption } from 'echarts';
+import * as echarts from 'echarts';
+import 'echarts-wordcloud';
 
 import { Notice } from 'obsidian';
 
@@ -32,11 +29,11 @@ export function render(opt: Options, el: HTMLElement) {
 
 function initEchart(el: HTMLElement, opt: EChartsInitOpts) {
 	const container = el.createDiv('echart-lite-container');
-	let chart = getInstanceByDom(container);
+	let chart = echarts.getInstanceByDom(container);
 	const { width = 600, height = 500 } = opt;
 
 	if (!chart) {
-		chart = init(
+		chart = echarts.init(
 			container,
 			Array.from(document.body.classList).includes('theme-dark')
 				? 'dark'
