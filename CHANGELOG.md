@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.0.0...1.1.0) (2026-04-27)
+
+
+### Features
+
+* add wordcloud type for echart ([d3a88b7](https://github.com/x-ideas/obsidian-echarts-lite/commit/d3a88b710b76b17e06221f53712ff445c989f96f))
+
 ## 1.0.0 (2025-11-14)
 
 
