@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.1.0...1.1.1) (2026-10-04)
+
+
+### Bug Fixes
+
+* update description ([e86d4aa](https://github.com/x-ideas/obsidian-echarts-lite/commit/e86d4aaa3ab4614c008b4763ec501c32e23071cf))
+
 ## [1.1.0](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.0.0...1.1.0) (2026-04-27)
 
 
