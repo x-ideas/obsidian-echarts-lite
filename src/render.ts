@@ -1,11 +1,11 @@
 import { type EChartsInitOpts, type EChartsOption } from 'echarts';
 import * as echarts from 'echarts';
-import 'echarts-wordcloud';
-
 import { Notice } from 'obsidian';
 
+import 'echarts-wordcloud';
+
 export interface Options extends EChartsOption {
-	initOpt?: EChartsInitOpts;
+  initOpt?: EChartsInitOpts;
 }
 
 /**
@@ -14,33 +14,31 @@ export interface Options extends EChartsOption {
  * @param el
  */
 export function render(opt: Options, el: HTMLElement) {
-	const chart = initEchart(el, opt.initOpt || {});
+  const chart = initEchart(el, opt.initOpt || {});
 
-	try {
-		chart.setOption(opt);
+  try {
+    chart.setOption(opt);
 
-		return chart;
-	} catch (e) {
-		// obsidian show tip
-		new Notice('Render [echart] failed');
-		console.error(e);
-	}
+    return chart;
+  } catch (e) {
+    // obsidian show tip
+    new Notice('Render [echart] failed');
+    console.error(e);
+  }
 }
 
 function initEchart(el: HTMLElement, opt: EChartsInitOpts) {
-	const container = el.createDiv('echart-lite-container');
-	let chart = echarts.getInstanceByDom(container);
-	const { width = 600, height = 500 } = opt;
+  const container = el.createDiv('echart-lite-container');
+  let chart = echarts.getInstanceByDom(container);
+  const { width = 600, height = 500 } = opt;
 
-	if (!chart) {
-		chart = echarts.init(
-			container,
-			Array.from(document.body.classList).includes('theme-dark')
-				? 'dark'
-				: 'light',
-			{ ...opt, width, height },
-		);
-	}
+  if (!chart) {
+    chart = echarts.init(
+      container,
+      Array.from(document.body.classList).includes('theme-dark') ? 'dark' : 'light',
+      { ...opt, width, height },
+    );
+  }
 
-	return chart;
+  return chart;
 }
