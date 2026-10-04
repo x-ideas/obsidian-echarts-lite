@@ -1,45 +1,42 @@
-import replace from '@rollup/plugin-replace';
-import { defineConfig } from 'vite';
-
 import builtins from 'builtin-modules';
+import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		replace({
-			'process.env.NODE_ENV': JSON.stringify('development'),
-			preventAssignment: true,
-		}),
-	],
-	build: {
-		lib: {
-			entry: 'src/main.ts',
-			fileName: 'main',
-			formats: ['cjs'],
-			cssFileName: 'styles',
-		},
-		minify: false,
-		emptyOutDir: true,
-		rollupOptions: {
-			output: {
-				dir: 'dist',
-			},
-			external: [
-				'obsidian',
-				'electron',
-				'@codemirror/autocomplete',
-				'@codemirror/collab',
-				'@codemirror/commands',
-				'@codemirror/language',
-				'@codemirror/lint',
-				'@codemirror/search',
-				'@codemirror/state',
-				'@codemirror/view',
-				'@lezer/common',
-				'@lezer/highlight',
-				'@lezer/lr',
-				...builtins,
-			],
-		},
-	},
+  plugins: [],
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
+  build: {
+    lib: {
+      entry: 'src/main.ts',
+      fileName: 'main',
+      formats: ['cjs'],
+      cssFileName: 'styles',
+    },
+    minify: false,
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        dir: 'dist',
+        entryFileNames: 'main.js',
+      },
+      external: [
+        'obsidian',
+        'electron',
+        '@codemirror/autocomplete',
+        '@codemirror/collab',
+        '@codemirror/commands',
+        '@codemirror/language',
+        '@codemirror/lint',
+        '@codemirror/search',
+        '@codemirror/state',
+        '@codemirror/view',
+        '@lezer/common',
+        '@lezer/highlight',
+        '@lezer/lr',
+        ...builtins,
+      ],
+    },
+  },
 });
