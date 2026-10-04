@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.1.1...1.1.2) (2026-10-04)
+
+
+### Bug Fixes
+
+* remove unexisted styles.css in workflow ([88f2edb](https://github.com/x-ideas/obsidian-echarts-lite/commit/88f2edb6cdc309dfba3235abb91b55ce54463b96))
+
 ## [1.1.1](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.1.0...1.1.1) (2026-10-04)
 
 
