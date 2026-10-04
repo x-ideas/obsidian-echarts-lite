@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.1.2...1.1.3) (2026-10-04)
+
+
+### Bug Fixes
+
+* improve code formatting and add version check script ([3d0f847](https://github.com/x-ideas/obsidian-echarts-lite/commit/3d0f847edca3e604485b7350e709fd2ead7be5ce))
+
 ## [1.1.2](https://github.com/x-ideas/obsidian-echarts-lite/compare/1.1.1...1.1.2) (2026-10-04)
 
 ### Bug Fixes
